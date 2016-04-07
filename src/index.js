@@ -4,7 +4,7 @@ module.exports = function sortOrderElements(fnKey){
 	fnKey = fnKey || function(d){return d;};
 	return function(){
 		for (var j = -1, m = this.length; ++j < m; ) {
-			let seen = new d3.set();
+			var seen = new d3.set();
 			for (var group = this[j], i = group.length - 1, next = group[i], node; --i >= 0; ) {
 				node = group[i];
 				if (!node)  continue;
